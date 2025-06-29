@@ -28,7 +28,7 @@ gestor-tareas/
 
    ```sh
    git clone https://github.com/Jonyls62/PFO2_REDES.git
-   cd gestor-tareas
+   cd PFO2_REDES
 ````
 
 2. Crea un entorno virtual (opcional pero recomendado):
