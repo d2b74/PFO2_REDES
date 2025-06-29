@@ -27,8 +27,8 @@ gestor-tareas/
 1. Clona este repositorio o descarga los archivos:
 
    ```sh
-   git clone https://github.com/tu-usuario/gestor-tareas.git
-   cd gestor-tareas
+   git clone https://github.com/d2b74/PFO2_REDES.git
+   cd PFO2_REDES
 ````
 
 2. Crea un entorno virtual (opcional pero recomendado):
