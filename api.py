@@ -67,6 +67,34 @@ def update_item(item_id):
     conn.close()
     return jsonify({'message': 'Item actualizado'})
 
+@app.route('/tareas', methods=['GET'])
+def tareas():
+    return '''<h1>Bienvenido al gestor de tareas</h1>'''
+
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.json
+    username = data.get('username')
+    password = data.get('password')
+
+    conn = get_db()
+    user = conn.execute('SELECT * FROM users WHERE username = ?', (username,)).fetchone()
+    conn.close()
+
+    if user and bcrypt.checkpw(password.encode(), user['password'].encode()):
+        return jsonify({'message': 'Login exitoso'}), 200
+    else:
+        return jsonify({'error': 'Credenciales inválidas'}), 401
+
+@app.route('/usuario', methods=['GET'])
+@auth.login_required
+def list_users():
+    conn = get_db()
+    users = conn.execute('SELECT id, username, password FROM users').fetchall()
+    conn.close()
+    return jsonify([dict(user) for user in users])
+
 @app.route('/items/<int:item_id>', methods=['DELETE'])
 @auth.login_required
 def delete_item(item_id):
