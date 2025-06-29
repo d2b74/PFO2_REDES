@@ -28,7 +28,7 @@ gestor-tareas/
 
    ```sh
 
-   git clone https://github.com/Jonyls62/PFO2_REDES.git
+   git clone https://github.com//d2b74/PFO2_REDES.git
    cd PFO2_REDES
 ````
 
