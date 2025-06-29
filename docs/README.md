@@ -27,7 +27,7 @@ gestor-tareas/
 1. Clona este repositorio o descarga los archivos:
 
    ```sh
-   git clone https://github.com/tu-usuario/gestor-tareas.git
+   git clone https://github.com/Jonyls62/PFO2_REDES.git
    cd gestor-tareas
 ````
 
